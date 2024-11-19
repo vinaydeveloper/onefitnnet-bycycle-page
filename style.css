@@ -1,0 +1,257 @@
+
+/* Global Styles */
+body {
+    margin:0;
+    font-family: 'Arial', sans-serif;
+    height: 100px;
+    color: #333;
+}
+
+/* Navbar */
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px; /* Transparent black for overlay effect */
+    position: absolute;
+    top: 2;
+    width: 100%;
+    z-index: 10; /* Ensure navbar stays above the hero */
+    color: white;
+    font-family: Arial, sans-serif }
+  
+.navbar .logo {
+    flex: 3; /* Takes up most of the space */
+    display: flex; /* Allows inline navigation items */
+    justify-content:center; /* Keep menu items on the left */
+        
+    }
+
+    .logo img {
+        height: 60px; /* Adjust logo size */
+    }
+  
+  .nav-links {
+        flex: 25; /* Center section takes more space */
+        display: flex;
+        justify-content: center; /* Center navigation links */
+        gap:120px; /* Space between links */
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .nav-links a:hover {
+        color: #ff4081;
+    }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #ff5722; /* Highlight color on hover */
+  }
+  
+  .cart {   
+        flex: 0; /* Takes up space on the right */
+        display: flex;
+        justify-content: flex-end; /* Aligns to the far right */
+        align-items: center;
+        color: white;
+    }
+
+    .cart img {
+        height: 35px; /* Cart icon size */
+        margin-right: 5px;
+    }
+
+    .cart span {
+        font-size: 15px;
+
+    }
+
+    .cart a {
+    color: white;
+    text-decoration: none;
+    }
+  
+    .cart a:hover {
+    color: #ff5722;
+    }
+  
+  /* Ensure hero content stays below the navbar */
+  .hero {
+    margin-top: 0px; /* Adjust if the navbar height changes */
+  }
+  
+/* Hero Section */
+.hero {
+    position: relative;
+    z-index: -1;
+    justify-content: left;
+    text-align: left;
+
+}
+*{
+    margin:0;
+    padding: 0;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 1000;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/header\ \(2\).png); 
+    background-size: cover;
+}
+
+.cycle-image {
+    display: flex;
+    margin: 100 ; /* Center the image horizontally */ /* Ensure it scales properly */
+    height: 100%;
+    width: 100%; /* Maintain aspect ratio */
+    margin-bottom: 1rem; /* Space below the image */
+  }
+  
+.cycle-image {
+    position: absolute;
+    top: 69%; /* Adjust based on where you want the image */
+    left: 117%;
+    height: 470px;
+    transform: translate(-50%, -50%); /* Center the image */
+    max-width: 80%; /* Adjust width for responsiveness */
+    z-index: 0; /* Ensure it stays above the background */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+  }
+  .red-overlay {
+    position: absolute;
+    top: 1px;
+    left: 125%; /* Start the overlay halfway */
+    width: 100%; /* Covers half the image */
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.4) ; /* Semi-transparent red */
+    z-index: 2;
+    pointer-events: fill; /* Ensures the overlay doesn’t block interaction */
+    border: none;
+  }
+    
+  
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color:white;
+    padding: 50px;
+    max-width: 600px;
+    text-align-last: left;
+    font-weight: bold;
+
+}
+
+.hero h1{
+    font-family: sans-serif;
+    display: flex;
+    margin: 15px auto;
+    font-size:1.2rem ;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    font-weight: bold;
+}
+
+.hero h2{
+    font-size: 3.5rem;
+    margin: 20px 0;
+}
+
+.hero h3{
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+}
+.hero ul {
+    margin: 5px 0;
+    padding:0;
+    list-style: none;
+}
+
+.hero li {
+    margin-bottom: 5px;
+}
+
+.buy-now {
+    background: red;
+    color: white;
+    border:none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 40px;
+    border-radius: 5px;
+
+
+}
+
+.buy-now:hover {
+    background: darkred;
+
+}
+
+/* New Arrivals */
+.new-arrivals {
+    padding: 50px 20px;
+    text-align: center;
+    font-family:sans-serif;
+}
+
+.new-arrivals h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    text-align: left;
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 8px;
+    color: #ddd;
+}
